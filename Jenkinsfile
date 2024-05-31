@@ -7,6 +7,9 @@ pipeline {
         DOCKER_IMAGE = 'sambathkumarj/netflixweb'
         K8S_NAMESPACE = 'default'
     }
+    options {
+        retry(3) // Retry stages 3 times if they fail
+    }
 
     stages {
         stage('Checkout') {
