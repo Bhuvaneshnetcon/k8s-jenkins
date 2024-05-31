@@ -14,8 +14,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                script {
+                    git credentialsId: 'bhuvaneshnetcon-github', url: 'https://github.com/Bhuvaneshnetcon/k8s-jenkins', branch: 'main'
+                }
                 // Checkout your application code and Kubernetes manifests from your repository
-                git 'https://github.com/Bhuvaneshnetcon/k8s-jenkins'
+               // git 'https://github.com/Bhuvaneshnetcon/k8s-jenkins'
             }
         }
 
