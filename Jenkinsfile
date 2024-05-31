@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout your application code and Kubernetes manifests from your repository
-                git 'https://gitlab.com/netcon2/k8s-jenkins'
+                git 'https://github.com/Bhuvaneshnetcon/k8s-jenkins'
             }
         }
 
